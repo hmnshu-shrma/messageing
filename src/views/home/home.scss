@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Abel", sans-serif;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+.wrapper {
+  width: auto;
+  height: 100vh;
+
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/853151/pexels-photo-853151.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: opacity(80%);
+}
+.Container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.521);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: #fff;
+}
+.logo {
+  font-family: "Abel", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.7rem;
+  color: white;
+  margin: 4%;
+}
+.logo img{
+  width:125px;
+}
+.menu {
+  display: inline-block;
+  line-height: 80px;
+}
+.menu ul {
+  list-style: none;
+  /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+}
+.menu ul li {
+  display: inline-block;
+}
+.menu ul li a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: #091a1b;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin: 0 5px;
+  transition: 0.5s ease;
+
+}
+.menu ul li a:hover {
+  border-color: white;
+}
+// .menu ul li:nth-child(5) a {
+//   color: #fff200;
+//   border: 1px solid #fff200;
+// }
+// .menu ul li:nth-child(5) a:hover {
+//   color: black;
+//   background-color: #fff200;
+// }
+.header {
+  text-align: center;
+}
+.header h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  color: white;
+  padding: 45% 20px 8px;
+}
+.header p {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  color: white;
+  padding: 10px 15px;
+}
+button {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+  color: black;
+  background-color: #fff;
+  padding: 20px 30px;
+  margin: 50px 5px 0;
+  border: none;
+  cursor: pointer;
+}

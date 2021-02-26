@@ -1,0 +1,27 @@
+.cartContainer{
+  margin:10vw;
+  .cart{
+    &__header {
+      border-bottom: #8080803b 3px solid;
+      padding-bottom: 50px;
+      font-size: 2rem;
+    }
+    &__items{
+      display: flex;
+    }
+    &__details{
+
+    }
+    &__image{
+      width: 250px;
+    }
+    &__similar--items{
+      border-top: #8080803b 3px solid;
+      padding-top: 50px;
+    }
+  }
+
+  .productContainerDetails {
+    display: flex;
+  }
+}

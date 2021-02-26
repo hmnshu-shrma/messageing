@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "price": 109.95,
+    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "category": "men clothing",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "details":{
+    "features":[ "Dual-camera system with 12MP Ultra Wide and Wide cameras Nightmode, Portrait mode, and 4K video up to 60fps",
+        "6.1-inch (15.5 cm) Liquid Retina HD LCD display",
+        "Water and dust resistant (2 meters for up to 30 minutes, IP68)",
+        "12MP TrueDepth front camera with Portrait mode, 4K video, and Slo-Mo",
+        "Face ID for secure authentication",
+        "A13 Bionic chip with third-generation Neural Engine",
+        "Fast-charge capable"
+      ],
+      "offers":""
+    }
+    ,
+    "delivery":"FREE delivery: Tomorrow Order within 8 hrs and 13 mins Details",
+    "ispu":true,
+    }
+  }
+]
