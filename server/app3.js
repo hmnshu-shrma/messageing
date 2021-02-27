@@ -1,8 +1,26 @@
+const express = require('express')
+// const router = express.Router()
+const app = express()
+
+const PORT = 3030
+
+app.get('/api', (req, res) => {
+  res.json({ message: 'Hello World' })
+})
+app.post('/api/data', (req, res) => {
+  eventEmitter.emit({ message: 'Hello World' })
+  res.json()
+})
+
+const server = app.listen(PORT, () => {
+  console.log(`listening on *:${PORT}`)
+})
+
 const WebSocket = require('ws')
 const EventEmitter = require('events')
 
 const eventEmitter = new EventEmitter()
-const wss = new WebSocket.Server({ port: 3030 })
+const wss = new WebSocket.Server({ server })
 
 wss.on('connection', function connection(ws) {
   ws.on('message', function incoming(message) {
