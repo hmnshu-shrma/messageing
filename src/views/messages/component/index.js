@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
     }
   }
 }))
-const client = new W3CWebSocket('wss://localhost:3030/api/ws')
+const client = new W3CWebSocket('ws://localhost:3030/api/ws')
 
 const MessageComponent = props => {
   const classes = useStyles()
