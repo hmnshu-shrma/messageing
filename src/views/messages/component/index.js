@@ -13,13 +13,15 @@ const useStyles = makeStyles(theme => ({
     }
   }
 }))
-const client = new W3CWebSocket('ws://localhost:3030/api/ws')
+// https://api.ipify.org?format=json
+const client = new W3CWebSocket('ws://localhost:3030/ws')
 
 const MessageComponent = props => {
   const classes = useStyles()
   const [name, setName] = useState('')
   const [message, setMessage] = useState()
   const [messages, setMessages] = useState([])
+  const [ipResponse, setIpResponse] = useState([])
   const [recMessage, setRecMessage] = useState()
 
   const handleSubmit = evt => {
@@ -52,25 +54,33 @@ const MessageComponent = props => {
     //   const message = res.data
     //   setResponse({ message })
     // })
+    axios.get('https://api.ipify.org?format=json' + '/api').then(res => {
+      const message = res.data
+      setIpResponse({ message })
+    })
   }, [])
   return (
     <>
       <div className='cart'>
         <form className={classes.root} noValidate autoComplete='off'>
-          <TextField
-            id='standard-basic'
-            label='Login Name'
-            value={name}
-            onChange={e => setName(e.target.value)}
-          />
-          <TextField
-            id='standard-basic'
-            label='message'
-            value={message}
-            onChange={e => setMessage(e.target.value)}
-          />
-          <button onClick={handleSubmit}>login</button>
-          <button onClick={handleSubmitmessage}>send message</button>
+          <div>
+            <TextField
+              id='standard-basic'
+              label='Login Name'
+              value={name}
+              onChange={e => setName(e.target.value)}
+            />
+            <button onClick={handleSubmit}>login</button>
+          </div>
+          <div>
+            <TextField
+              id='standard-basic'
+              label='message'
+              value={message}
+              onChange={e => setMessage(e.target.value)}
+            />
+            <button onClick={handleSubmitmessage}>send message</button>
+          </div>
         </form>
         {recMessage && <p>message {recMessage} </p>}
         {messages && messages.map(message => <p>{message}</p>)}
