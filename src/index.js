@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import 'Styles/style.scss'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import RouteSlug from './routes/'
-
+import { webSocketHandler } from './utils/websocket'
 class App extends Component {
   renderRoutes() {
     return RouteSlug.map((route, i) => {
@@ -19,6 +19,7 @@ class App extends Component {
   }
 
   render() {
+    webSocketHandler()
     return (
       <>
         <BrowserRouter>

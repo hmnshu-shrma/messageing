@@ -20,6 +20,7 @@ app.use(
     extended: true
   })
 )
+var sockets = []
 let userData = {} // to temporarly store userData
 router.post('/api/data', bodyParser.json(), (req, res) => {
   const messageData = JSON.stringify(req.body)
@@ -33,20 +34,20 @@ router.post('/api/data', bodyParser.json(), (req, res) => {
 const server = app.listen(PORT, () => {
   console.log(`listening on *:${PORT}`)
 })
-const wss = new WebSocket.Server({ server, path: '/ws' })
 
-wss.on('connection', function connection(ws, req) {
+const wss = new WebSocket.Server({ server, path: '/ws' })
+wss.on('connection', function connection(ws) {
   ws.on('message', function incoming(message) {
     const inputData = JSON.parse(message)
     userData = inputData
-    userData.wsId = req.headers['sec-websocket-key']
+    userData.wsId = ws.id
     // Subscripting
     if (inputData.msgType === 'IDENTIFICATION') {
-      eventEmitter.on(userData.wsId, outputMessage => {
+      eventEmitter.on(inputData.id, outputMessage => {
         if (ws.readyState === ws.OPEN) {
           ws.send(outputMessage)
         } else {
-          eventEmitter.removeAllListeners([userData.wsId]) // remove all listeners registered with this ID.
+          eventEmitter.removeAllListeners([inputData.id]) // remove all listeners registered with this ID.
           ws.terminate()
         }
       })
@@ -55,14 +56,14 @@ wss.on('connection', function connection(ws, req) {
 
     // Sending
     if (inputData.msgType === 'SEND_MSG') {
-      eventEmitter.emit(inputData.receiverId, inputData.message, userData.wsId)
+      eventEmitter.emit(inputData.receiverId, inputData.message, ws.id)
       return
     }
 
     // More message handlings ...
     ws.on('close', () => {
       // remember to un-sub
-      eventEmitter.removeAllListeners([userData.wsId])
+      eventEmitter.removeAllListeners([inputData.id])
       ws.terminate()
     })
   })
