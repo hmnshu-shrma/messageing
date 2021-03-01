@@ -20,7 +20,7 @@ app.use(
     extended: true
   })
 )
-
+var sockets = []
 let userData = {} // to temporarly store userData
 router.post('/api/data', bodyParser.json(), (req, res) => {
   const messageData = JSON.stringify(req.body)
@@ -37,6 +37,8 @@ const server = app.listen(PORT, () => {
 
 const wss = new WebSocket.Server({ server, path: '/ws' })
 wss.on('connection', function connection(ws) {
+  console.log(ws, 'headers')
+
   ws.on('message', function incoming(message) {
     const inputData = JSON.parse(message)
     userData = inputData
