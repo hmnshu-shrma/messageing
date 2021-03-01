@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 // https://api.ipify.org?format=json
-const client = new W3CWebSocket('ws://localhost:3030/ws')
+const client = new W3CWebSocket('ws://localhost:3030/ws', 'optionalProtocol')
 
 const MessageComponent = props => {
   const classes = useStyles()
