@@ -1,0 +1,21 @@
+{
+  "serviceStatus" : "SUCCESS",
+  "errorMessages" : [ ],
+  "outputData" : {
+    "cartId" : "a749aea4-15e2-4b83-99b9-d9e36c16b79c",
+    "userName" : "sinsh9k",
+    "cartItems" : [ {
+      "cartItemId" : "48cd5eb8-2d78-44ff-a507-e3f76d7776a9",
+      "quantity" : 1,
+      "itemPrice" : 109.95,
+      "extendedPrice" : 109.95,
+      "productId" : "SMA515UZKVZ",
+      "productName" : "iPhone 12 Pro Max",
+      "imageUrl" : "https://ss7.vzw.com/is/image/VerizonWireless/apple-iphone-12-pro-max-silver-10132020?$device-lg$"
+    } ],
+    "totalPrice" : 109.95
+  },
+  "ip" : "10.150.32.158",
+  "pageName" : "cart",
+  "requestProcessingTime" : null
+}

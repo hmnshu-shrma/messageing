@@ -6,14 +6,22 @@
       padding-bottom: 50px;
       font-size: 2rem;
     }
-    &__items {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
+    &__item {
+      // display: flex;
+      // flex-flow: row wrap;
+      // justify-content: space-between;
+      border-bottom: #8080803b 1px solid;
+      &:last-child{
+        border-bottom: #8080803b 0px solid;
+      }
     }
     &__details{
-
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 25px;
+      margin-left: 25px;
     }
+
     &__image{
       width: 250px;
     }
@@ -26,4 +34,12 @@
   .productContainerDetails {
     display: flex;
   }
+}
+
+.price_details{
+  border-top: #8080803b 3px solid;
+}
+
+.image{
+  display: inline-block;
 }

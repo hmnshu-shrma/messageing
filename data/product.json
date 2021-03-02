@@ -1,10 +1,160 @@
-  {
-    "id": 1,
-    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-    "price": 109.95,
-    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-    "category": "men clothing",
-    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-    "delivery":"FREE delivery: Tomorrow Order within 8 hrs and 13 mins Details",
-    "ispu":true,
-  }
+{
+	"serviceStatus": "SUCCESS",
+	"errorMessages": [],
+	"outputData": [{
+		"id": "SMA515UZKVZ",
+		"title": "iPhone 12 Pro Max",
+		"price": 109.95,
+		"description": "iPhone 12 Pro Max",
+		"productName": "iPhone 12 Pro Max",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/apple-iphone-12-pro-max-silver-10132020?$device-lg$"
+	}, {
+		"id": "MUY22LL/A",
+		"title": "iPhone 12 mini",
+		"price": 22.3,
+		"description": "iPhone 12 mini",
+		"productName": "iPhone 12 mini",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/apple-64gb-5-4in-iphone-12-mini-blue-mg6k3ll-a?$device-lg$"
+	}, {
+		"id": "SMT878UZKA",
+		"title": "iPhone 12 Pro",
+		"price": 55.99,
+		"description": "iPhone 12 Pro",
+		"productName": "iPhone 12 Pro",
+		"category": "men clothing",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/iphone-12-pro-pacific-blue?$device-lg$"
+	}, {
+		"id": "VPC30WPDTYPEC-M",
+		"title": "iPhone 12",
+		"price": 15.99,
+		"description": "iPhone 12",
+		"productName": "iPhone 12",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/apple-iphone-12-blue-10132020?$device-lg$"
+	}, {
+		"id": "ALCATEL-4051S",
+		"title": "iPhone SE (2020)",
+		"price": 695.0,
+		"description": "iPhone SE (2020)",
+		"productName": "iPhone SE (2020)",
+		"category": "https://ss7.vzw.com/is/image/VerizonWireless/apple-iphone-se-2020-black-04152020?$device-lg$",
+		"image": null
+	}, {
+		"id": "MWKP2LL/A",
+		"title": "Galaxy S21 Ultra 5G ",
+		"price": 168.0,
+		"description": "Galaxy S21 Ultra 5G",
+		"productName": "Galaxy S21 Ultra 5G ",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/samsung-flagship-smartphone-palette-p3-black-128gb-smg998uzkv?$device-lg$"
+	}, {
+		"id": "MGF73LL/A",
+		"title": "Galaxy S21 5G",
+		"price": 9.99,
+		"description": "Galaxy S21 5G",
+		"productName": "Galaxy S21 5G",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/02-samsung-palette-pink?$device-lg$"
+	}, {
+		"id": "999000342",
+		"title": "iPhone 11",
+		"price": 10.99,
+		"description": "iPhone 11",
+		"productName": "iPhone 11",
+		"category": "jewelery",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/Apple_iPhone_11_Red_09102019?$device-lg$"
+	}, {
+		"id": "MYH82LL/A",
+		"title": "Galaxy A51 ",
+		"price": 64.0,
+		"description": "Galaxy A51",
+		"productName": "Galaxy A51 ",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a51-4g-smartphone-black-sma515uzkvz?$device-lg$"
+	}, {
+		"id": "10",
+		"title": "Samsung Galaxy Note20 Ultra 5G",
+		"price": 64.0,
+		"description": "Samsung Galaxy Note20 Ultra 5G",
+		"productName": "Samsung Galaxy Note20 Ultra 5G",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a51-4g-smartphone-black-sma515uzkvz?$device-lg$"
+	}, {
+		"id": "TCL-9048S",
+		"title": "DuraForce PRO 2 with Sapphire Shield",
+		"price": 64.0,
+		"description": "DuraForce PRO 2 with Sapphire Shield",
+		"productName": "DuraForce PRO 2 with Sapphire Shield",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/Kyocera_DuraForce_Pro_II?$device-lg$"
+	}, {
+		"id": "GA01955-US",
+		"title": "Compact Phone by Palm",
+		"price": 64.0,
+		"description": "Galaxy A51",
+		"productName": "Compact Phone by Palm",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/palm-phone-gold?$device-lg$"
+	}, {
+		"id": "KAZF119VWQ",
+		"title": "iPhone XR (Certified Pre-Owned)",
+		"price": 64.0,
+		"description": "iPhone XR (Certified Pre-Owned)",
+		"productName": "iPhone XR (Certified Pre-Owned)",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/iPhoneXr_Coral_PureAngles?$device-lg$"
+	}, {
+		"id": "SMN986UZNV",
+		"title": "moto g stylus",
+		"price": 64.0,
+		"description": "moto g stylus",
+		"productName": "moto g stylus",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/motorola-moto-g8-stylus-blue-motxt20435?$device-lg$"
+	}, {
+		"id": "SMG991UZIV",
+		"title": "razr",
+		"price": 64.0,
+		"description": "razr",
+		"productName": "razr",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/motorola-voyager-device-nov082019?$device-lg$"
+	}, {
+		"id": "MHG43LL/A",
+		"title": "Galaxy Note20 Ultra 5G",
+		"price": 64.0,
+		"description": "Galaxy Note20 Ultra 5G",
+		"productName": "Galaxy Note20 Ultra 5G",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/samsung-3A14V1S2_MysticBronze?$device-lg$"
+	}, {
+		"id": "SMT727VZSA",
+		"title": "Galaxy S20 FE 5G UW",
+		"price": 64.0,
+		"description": "Galaxy S20 FE 5G UW",
+		"productName": "Galaxy S20 FE 5G UW",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/samsung-gs-20-fe-cloud-navy-smg781vzbv-09112020?$device-lg$"
+	}, {
+		"id": "SMT978UZKA",
+		"title": "Galaxy A01",
+		"price": 64.0,
+		"description": "Galaxy A01",
+		"productName": "Galaxy A01",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-device-a01-post-and-prepaid?$device-lg$"
+	}, {
+		"id": "SMT307UZNA",
+		"title": "LG K51 trade;",
+		"price": 64.0,
+		"description": "LG K51 trade;",
+		"productName": "LG K51 trade;",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/LG_K51_Titan?$device-lg$"
+	}],
+	"ip": "10.150.32.158",
+	"pageName": "listing",
+	"requestProcessingTime": null
+}

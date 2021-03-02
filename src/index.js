@@ -9,6 +9,7 @@ import RouteSlug from './routes/'
 import { w3cwebsocket as W3CWebSocket } from 'websocket'
 import axios from 'axios'
 import history from './utils/history'
+import Header from './views/header'
 // import OrderConfirmationContainer from './orderConfirmation'
 
 const client = new W3CWebSocket('ws://localhost:3030/ws', 'optionalProtocol')
@@ -24,7 +25,9 @@ class App extends Component {
     client.onmessage = message => {
       const data = JSON.parse(message.data)
       console.log(data, 'data')
+      console.log(message, 'message')
       console.log(this.props, 'main props')
+      localStorage.setItem('pageErrorSuccess', data.serviceStatus)
       localStorage.setItem('messageData', JSON.stringify(message.data))
       this.setState({ messageData: data })
 
@@ -32,6 +35,7 @@ class App extends Component {
         window.location = `/${data.pageName}`
       }
     }
+
     this.state.messageData ? console.log('no call') : this.callIpAddress()
   }
 
@@ -68,6 +72,7 @@ class App extends Component {
   render() {
     return (
       <>
+        <Header />
         <Router history={history}>
           <Switch>{this.renderRoutes()}</Switch>
         </Router>

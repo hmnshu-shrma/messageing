@@ -4,4 +4,10 @@
   .productContainerDetails {
     display: flex;
   }
+  .product__image{
+    max-width:400px;
+  }
+  .productList__details {
+    margin-left: 25px;
+  }
 }

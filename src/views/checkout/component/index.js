@@ -1,53 +1,80 @@
-import React from 'react'
-// import Button from '@material-ui/core/Button'
-// import Loading from '../../loading'
+import React, { useState, useEffect } from 'react'
 import '../cart.scss'
-// import { makeStyles } from '@material-ui/core/styles'
-//
-// const useStyles = makeStyles(theme => ({
-//   margin: {
-//     margin: theme.spacing(1)
-//   },
-//   extendedIcon: {
-//     marginRight: theme.spacing(1)
-//   }
-// }))
 
-const CartComponent = props => {
-  // const classes = useStyles()
+const CheckoutComponent = props => {
+  const txt =
+    "You'll be recieveing the payment link in 5 seconds on your registered number."
+  const data = localStorage.getItem('messageData')
+  const dataObj = JSON.parse(JSON.parse(data))
+  const [productListData, setProductsListData] = useState({})
 
-  const txt = 'You\'ll be recieveing the payment link in 5 seconds on your registered number.'
-  const price = `$${1099}/-`
-
-  // setTimeout(function() {
-  //   window.location.href = 'order-confirmation'
-  // }, 5000)
+  useEffect(() => {
+    setProductsListData(dataObj.outputData)
+  }, 0)
+  const { taxPrice, totalPrice, shippingPrice } = productListData
 
   return (
     <>
       <div className='cart'>
-        <h2 className='cart__header'>Order Confirmed</h2>
-        <div className='cart__items'>
-          <img
-            src='https://images-na.ssl-images-amazon.com/images/I/71i2XhHU3pL._SX679_.jpg'
-            alt='image'
-            className='cart__image'
-          />
-          <div className='cart__details'>
-            <h2>New Apple iPhone 11 (64GB) - Black</h2>
-            <p>FREE garaunteed delivery by Tomorrow 9pm</p>
-            <p>Quantity : 1</p>
-            <p>Color: Space gray</p>
-            <p>Size: 256Gb</p>
+        <h2 className='cart__header'>Checkout</h2>
+        <ul className='cart__items'>
+          {productListData.orderItems &&
+            productListData.orderItems.map((product, index) => (
+              <li className='cart__item' key={index}>
+                {product.imageUrl && (
+                  <img className='image' src={product.imageUrl} />
+                )}
+                <div className='cart__details'>
+                  <h2>{product.productName}</h2>
+                  {product.quantity && <p>Quantity : {product.quantity}</p>}
+                  <p>
+                    <strong>Price</strong> : {product.orderItemPrice}
+                  </p>
+                </div>
+              </li>
+            ))}
+        </ul>
+        {totalPrice && (
+          <div className='price_details'>
+            <h3>Price Details</h3>
+            {totalPrice && (
+              <p>
+                <strong>Total price</strong> : $ {totalPrice}
+              </p>
+            )}
+            {taxPrice && (
+              <p>
+                <strong>Tax price</strong> : ${taxPrice}
+              </p>
+            )}
+            {shippingPrice && (
+              <p>
+                <strong>Shipping Price</strong> : ${shippingPrice}
+              </p>
+            )}
           </div>
-          <div className='price'>
-            <h2>{price}</h2>
-          </div>
-        </div>
+        )}
+        {productListData && productListData.billingAddress && (
+          <p>
+            <strong> Billing Address </strong>:{' '}
+            {productListData.billingAddress.addressLine1} ,{' '}
+            {productListData.billingAddress.addressLine2},
+            {productListData.billingAddress.city}{' '}
+          </p>
+        )}
+
+        {productListData && productListData.shippingAddress && (
+          <p>
+            <strong> Shipping Address </strong>:{' '}
+            {productListData.shippingAddress.addressLine1} ,{' '}
+            {productListData.shippingAddress.addressLine2},
+            {productListData.shippingAddress.city}{' '}
+          </p>
+        )}
       </div>
       <h2>{txt}</h2>
     </>
   )
 }
 
-export default CartComponent
+export default CheckoutComponent

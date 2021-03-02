@@ -1,16 +1,16 @@
 import React from 'react'
 // import './landing.scss'
 import './cart.scss'
-import CartComponent from './component/'
+import CheckoutComponent from './component/'
 
-const cartContainer = props => {
+const CheckoutContainer = props => {
   return (
     <>
       <div className='cartContainer'>
-        <CartComponent page={props} />
+        <CheckoutComponent page={props} />
       </div>
     </>
   )
 }
 
-export default cartContainer
+export default CheckoutContainer
