@@ -7,7 +7,7 @@ const cartContainer = props => {
   return (
     <>
       <div className='cartContainer'>
-        <CartComponent />
+        <CartComponent page={props} />
       </div>
     </>
   )

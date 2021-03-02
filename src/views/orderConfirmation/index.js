@@ -1,16 +1,16 @@
 import React from 'react'
 // import './landing.scss'
 import './cart.scss'
-import CartComponent from './component/'
+import OrderConfirmation from './component/'
 
-const cartContainer = props => {
+const OrderConfirmationContainer = props => {
   return (
     <>
       <div className='cartContainer'>
-        <CartComponent />
+        <OrderConfirmation page={props} />
       </div>
     </>
   )
 }
 
-export default cartContainer
+export default OrderConfirmationContainer

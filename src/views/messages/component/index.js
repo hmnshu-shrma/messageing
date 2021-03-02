@@ -24,7 +24,6 @@ const MessageComponent = props => {
   const [messages, setMessages] = useState([])
   // const [isConnected, setIsConnected] = useState()
   const [recMessage, setRecMessage] = useState()
-
   var connected = false
 
   const handleSubmit = evt => {
@@ -63,11 +62,6 @@ const MessageComponent = props => {
       setRecMessage(message.data)
       console.log(message, 'data recieved')
     }
-
-    // axios.get('http://127.0.0.1:3000' + '/api').then(res => {
-    //   const message = res.data
-    //   setResponse({ message })
-    // })
 
     axios.get('https://api.ipify.org?format=json').then(res => {
       const ipData = res.data

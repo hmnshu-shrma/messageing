@@ -7,7 +7,7 @@ const LandingContainer = props => {
   return (
     <>
       <div className='productContainer'>
-        <ProductDetailComponent />
+        <ProductDetailComponent page={props} />
       </div>
     </>
   )
