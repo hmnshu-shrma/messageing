@@ -12,7 +12,15 @@ const CartComponent = props => {
   useEffect(() => {
     setProductsListData(dataObj.outputData)
   }, 0)
-  console.log(productListData)
+
+  const { orderId, orderStatus, taxPrice, totalPrice } = productListData
+  console.log(productListData, 'data')
+  console.log(orderId, 'orderId')
+  console.log(orderStatus, 'orderStatus')
+  console.log(taxPrice, 'taxPrice')
+  console.log(totalPrice, 'totalPrice')
+
+  // console.log(productListData.orderItems, 'data')
   const txt =
     'Your Payment is successfull you will recieve the order in 3-4 workign days.'
 
@@ -20,23 +28,7 @@ const CartComponent = props => {
     <>
       <div className='cart'>
         <h2 className='cart__header'>Order Confirmation</h2>
-        {orderItems &&
-          orderItems.map((product, index) => (
-            <div className='cart__items'>
-              <img
-                src='https://images-na.ssl-images-amazon.com/images/I/71i2XhHU3pL._SX679_.jpg'
-                alt='image'
-                className='cart__image'
-              />
-              <div className='cart__details'>
-                <h2>{product.productName}</h2>
-                <p>FREE garaunteed delivery by Tomorrow 9pm</p>
-                <p>Quantity : {product.productId}</p>
-                <p>Color: Space gray</p>
-                <p>Size: 256Gb</p>
-              </div>
-            </div>
-          ))}
+
         {productListData && productListData.billingAddress && (
           <p>
             <strong> Billing Address </strong>:{' '}
