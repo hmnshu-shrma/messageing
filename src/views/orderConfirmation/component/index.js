@@ -13,8 +13,15 @@ const CartComponent = props => {
     setProductsListData(dataObj.outputData)
   }, 0)
 
-  const { taxPrice, totalPrice, shippingPrice, delivered } = productListData
+  const {
+    taxPrice,
+    totalPrice,
+    shippingPrice,
+    delivered,
+    orderId
+  } = productListData
 
+  console.log(orderId)
   const txt =
     'Your Payment is successfull you will recieve the order in 3-4 workign days.'
 
@@ -22,6 +29,11 @@ const CartComponent = props => {
     <>
       <div className='cart'>
         <h2 className='cart__header'>Order Confirmation</h2>
+        {orderId && (
+          <h3>
+            <strong>Order Id : {orderId} </strong>
+          </h3>
+        )}
         {productListData.orderItems &&
           productListData.orderItems.map((product, index) => (
             <div className='cart__items' key={index}>

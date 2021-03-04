@@ -3,16 +3,15 @@ import ReactDOM from 'react-dom'
 import 'Styles/style.scss'
 import { Router, Route, Switch } from 'react-router-dom'
 import RouteSlug from './routes/'
-// import { webSocketHandler } from './utils/websocket'
-// import { Provider } from 'react-redux'
-// import store from './store'
 import { w3cwebsocket as W3CWebSocket } from 'websocket'
 import axios from 'axios'
 import history from './utils/history'
 import Header from './views/header'
-// import OrderConfirmationContainer from './orderConfirmation'
 
-const client = new W3CWebSocket('ws://localhost:3030/ws', 'optionalProtocol')
+const client = new W3CWebSocket(
+  'ws://13.233.84.147:3030/ws',
+  'optionalProtocol'
+)
 
 class App extends Component {
   constructor(props) {
@@ -34,6 +33,19 @@ class App extends Component {
       if (data && data.pageName) {
         window.location = `/${data.pageName}`
       }
+    }
+    client.onclose = event => {
+      if (event.wasClean) {
+        console.log(
+          `[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`
+        )
+      } else {
+        console.error('[close] Connection died')
+      }
+    }
+
+    client.onerror = error => {
+      console.error(`[error] ${error.message}`)
     }
 
     this.state.messageData ? console.log('no call') : this.callIpAddress()

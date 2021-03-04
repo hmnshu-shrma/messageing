@@ -4,7 +4,7 @@ import HomeComponent from './component/'
 const HomeContainer = props => {
   return (
     <>
-      <div className='cartContainer'>
+      <div className='HomeContainer'>
         <HomeComponent page={props} />
       </div>
     </>

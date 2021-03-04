@@ -1,20 +1,16 @@
 {
-  "serviceStatus" : "SUCCESS",
-  "errorMessages" : [ ],
-  "outputData" : {
-    "cartId" : "1e76681f-436b-482a-bd6a-4356890457a2",
-    "userName" : "sinsh9k",
-    "cartItems" : [ {
-      "cartItemId" : "d8a774a2-d48c-4675-84fe-222f3b62bb03",
-      "quantity" : 1,
-      "itemPrice" : 109.95,
-      "extendedPrice" : 109.95,
-      "productId" : "1",
-      "productName" : "iPhone 12 Pro Max"
-    } ],
-    "totalPrice" : 109.95
-  },
-  "ip" : "10.150.32.158",
-  "pageName" : "cart",
-  "requestProcessingTime" : null
+	"serviceStatus": "SUCCESS",
+	"errorMessages": [],
+	"outputData": {
+		"id": "SMA515UZKVZ",
+		"title": "iPhone 12 Pro Max",
+		"price": 109.95,
+		"description": "iPhone 12 Pro Max",
+		"productName": "iPhone 12 Pro Max",
+		"category": "smartphones",
+		"image": "https://ss7.vzw.com/is/image/VerizonWireless/apple-iphone-12-pro-max-silver-10132020?$device-lg$"
+	},
+	"ip": "10.150.32.158",
+	"pageName": "product",
+	"requestProcessingTime": null
 }

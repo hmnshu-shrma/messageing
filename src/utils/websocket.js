@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { w3cwebsocket as W3CWebSocket } from 'websocket'
-const client = new W3CWebSocket('ws://localhost:3030/ws', 'optionalProtocol')
+const client = new W3CWebSocket('ws://3.86.202.209//ws', 'optionalProtocol')
 
 export const webSocketHandler = () => {
   let connected = false
